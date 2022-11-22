@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 20px 100px;
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline;
+        }
+        img{
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+        p{
+            font-size: 18px;
+            text-align: justify;
+        }
+        .btn{
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border: solid grey 2px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        #white{
+            background-color: #ffffff;
+        }
+        #aqua{
+            background-color: #00ffff;
+        }
+        #violet{
+            background-color: #ee82ee;
+        }
+        #black{
+            background-color: #000000;
+        }
+        #color-switcher{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="color-switcher">
+        <span class="btn" id="white" onclick="changeBG('#ffffff')"></span>
+        <span class="btn" id="aqua" onclick="changeBG('#00ffff')"></span>
+        <span class="btn" id="violet" onclick="changeBG('#ee82ee')"></span>
+        <span class="btn" id="black" onclick="changeBG('#000000')"></span>
+    </div>
+    <h1 class="text">About us!</h1>
+    <img src="https://plus.unsplash.com/premium_photo-1668383208180-b2fe8c2f6204?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">
+    <p class="text">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti officiis, vel quas iusto laudantium dignissimos dolorum optio, necessitatibus similique itaque repellat error saepe aliquam possimus totam modi, doloremque cumque? Quibusdam, omnis ea? Iure culpa accusamus reiciendis delectus in voluptatem omnis quo at quis enim officiis ipsa, explicabo asperiores voluptas ratione, harum eum amet numquam corrupti? Atque debitis nulla obcaecati cumque illum sapiente beatae, amet unde vel dolores enim reiciendis necessitatibus tempore! Quia consectetur et eius minus, eum velit cum deleniti corrupti, iusto modi consequuntur, odit placeat reprehenderit at! Aperiam necessitatibus obcaecati pariatur aliquam porro optio esse consectetur. Voluptate qui dolorum fugiat repellat cupiditate nisi voluptatem iste repellendus illo. Sint hic, cum numquam, reiciendis aliquam cumque est deserunt doloribus error iure, fugit temporibus. Maxime totam asperiores animi eveniet esse delectus illum enim sint nesciunt reprehenderit ab quasi nemo officiis dignissimos odit voluptatem fugiat aut, consequuntur porro odio blanditiis veniam. Quae at officiis illo nulla atque recusandae dolor magni quia modi fugiat deserunt vero velit, ut soluta culpa. Veritatis voluptatum, blanditiis voluptatibus recusandae dignissimos ab consequatur temporibus laudantium rem facilis voluptate labore pariatur officiis aperiam vitae laborum aliquid nesciunt alias saepe maiores, repellendus deserunt beatae. Deserunt non assumenda quos reprehenderit accusantium expedita.
+    </p>
+    <script>
+        function changeBG(color){
+            document.body.style.backgroundColor=color;
+            let txt=document.getElementsByClassName("text");
+            if(color == "#000000"){
+                for(let elm of txt){
+                    elm.style.color="white";
+                }
+            }
+            else{
+                for(let elm of txt){
+                    elm.style.color="black";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
